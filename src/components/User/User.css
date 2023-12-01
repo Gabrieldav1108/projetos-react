@@ -5,8 +5,9 @@
 .card .user {
     background-color:  #F0F0F0;
     border-radius: 10px 10px 0px 0px;
-    max-width: 25%;
+    min-width: 240px
 }
+
 .card img {
     width: 100px;
     border-radius: 50%;
@@ -20,7 +21,9 @@
     border-radius: 0px 0px 10px 10px;
     padding-top: 90px;
     padding-bottom: 40px;
-    max-width: 25%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
 .card .footer h4 {

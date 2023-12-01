@@ -15,13 +15,17 @@ const save = (e) => {
         image,
         team
     })
+    setName('')
+    setOffice('')
+    setImage('')
+    setTeam('')
 }
 
 //estados dos inputs
 const [name, setName] = useState('')
 const [office, setOffice] = useState('')
 const [image, setImage] = useState('')
-const [team, setTeam] = useState('')
+const [team, setTeam] = useState('Programação')
 
     return (
         //seção do formulario

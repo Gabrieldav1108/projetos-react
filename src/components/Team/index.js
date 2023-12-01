@@ -7,11 +7,12 @@ const Team = (props) => {
     }
 
     return(
-
-        <section className='team' style={css}>
+        //renderização condicional
+        props.users.length > 0 && <section className='team' style={css}>
             <h3 style={{borderColor: props.primaryColor}}>{props.name}</h3>
-            <User/>
-            <User/>
+            <div className='teamUsers'>
+                {props.users.map(user => <User background={props.primaryColor} name={user.name} office={user.office} image={user.image} key={user.name}/>)}
+            </div>
         </section>
     )
 }

@@ -3,12 +3,12 @@ import './User.css'
 const User = (props) => {
     return (
         <div className='card'>
-            <div className='user'>
-                <img src='https://github.com/Gabrieldav1108.png' alt=''/>
+            <div className='user' style={{backgroundColor: props.background}}>
+                <img src={props.image} alt={props.name}/>
             </div>
             <div className='footer'>
-                <h4>gabriel</h4>
-                <h5>lindo</h5>
+                <h4>{props.name}</h4>
+                <h5>{props.office}</h5>
             </div>
         </div>
     )

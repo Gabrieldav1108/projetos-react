@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Banner from './components/Banner';
 import Form from './components/Form';
 import Team from './components/Team';
-import User from './components/User';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -47,7 +47,6 @@ function App() {
   const [users, setUsers] = useState([])
 
   const newUserAdded = (user) => {
-    console.log(user)
     setUsers([...users, user])
   }
 
@@ -56,7 +55,15 @@ function App() {
       <Banner />
       <Form nameOfTeams={teams.map(team => team.name )} registeredUser = {user => newUserAdded(user)}/>
       
-      {teams.map(team => <Team name={team.name} key={team.name} primaryColor={team.primaryColor} secundaryColor={team.secundaryColor}/>)}
+      {teams.map(team => <Team 
+      name={team.name} 
+      key={team.name} 
+      primaryColor={team.primaryColor} 
+      secundaryColor={team.secundaryColor}
+      users={users.filter(user => user.team === team.name)}
+      />)}
+
+      <Footer/>
 
     </div>
   );
